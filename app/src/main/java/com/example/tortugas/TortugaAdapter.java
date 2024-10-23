@@ -33,12 +33,6 @@ public class TortugaAdapter extends RecyclerView.Adapter<TortugaAdapter.TortugaV
         holder.arma.setText(tortuga.getArma());
         holder.descripcion.setText(tortuga.getDescripcion());
         holder.imagen.setImageResource(tortuga.getImagen());
-
-        if (position % 2 == 0) {
-            holder.itemView.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.colorPar));
-        } else {
-            holder.itemView.setBackgroundColor(holder.itemView.getContext().getResources().getColor(R.color.colorImpar));
-        }
     }
 
 
