@@ -1,5 +1,6 @@
 package com.example.tortugas;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +34,24 @@ public class TortugaAdapter extends RecyclerView.Adapter<TortugaAdapter.TortugaV
         holder.arma.setText(tortuga.getArma());
         holder.descripcion.setText(tortuga.getDescripcion());
         holder.imagen.setImageResource(tortuga.getImagen());
+
+
+        holder.imagen.setOnClickListener(view -> {
+            Intent intent = new Intent(view.getContext(), DetallesTortuga.class);
+            intent.putExtra("tortuga", tortuga);
+            view.getContext().startActivity(intent);
+        });
+
+        int[] colores = {
+                R.color.color3,
+                R.color.color1,
+                R.color.color2,
+                R.color.color4,
+        };
+
+        int colorIndex = position % colores.length;
+        int color = holder.itemView.getContext().getResources().getColor(colores[colorIndex]);
+        holder.itemView.setBackgroundColor(color);
     }
 
 

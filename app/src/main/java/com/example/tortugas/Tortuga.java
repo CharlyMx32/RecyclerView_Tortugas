@@ -1,6 +1,7 @@
 package com.example.tortugas;
+import java.io.Serializable;
 
-public class Tortuga {
+public class Tortuga implements Serializable {
     private String nombre;
     private String arma;
     private String descripcion;

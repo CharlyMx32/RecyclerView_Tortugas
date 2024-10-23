@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         List<Tortuga> listaTortugas = new ArrayList<>();
         listaTortugas.add(new Tortuga("Leonardo", "Espada", "Es azul y tiene disciplina", R.drawable.leonardo));
         listaTortugas.add(new Tortuga("Rafael", "Sai", "Es rojo y es muy fuerte", R.drawable.rafael));
-        listaTortugas.add(new Tortuga("Miguel Angel", "nunshacos", "Es naranja y es muy tonto", R.drawable.leonardo));
-        listaTortugas.add(new Tortuga("Donatelo", "bara", "Es morado y es muy listo", R.drawable.miguel));
+        listaTortugas.add(new Tortuga("Miguel Angel", "nunshacos", "Es naranja y es muy tonto", R.drawable.miguel));
+        listaTortugas.add(new Tortuga("Donatelo", "bara", "Es morado y es muy listo", R.drawable.donatelo));
 
         TortugaAdapter adapter = new TortugaAdapter(listaTortugas);
         recyclerView.setAdapter(adapter);
